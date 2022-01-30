@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\User;
+
+class DashboardController extends Controller
+{
+    public function index()
+    {
+        $data = User::get();
+
+        return view('dashboard', compact('data'));
+    }
+}
